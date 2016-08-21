@@ -39,15 +39,6 @@ along with semanticcms-core-style.  If not, see <http://www.gnu.org/licenses />.
 	<url>https://semanticcms.com/docs/semanticcms-core-style/</url>
 	<description>Default style for Java API for modeling web page content and relationships.</description>
 
-	<developers>
-		<developer>
-			<name>AO Industries, Inc.</name>
-			<email>support@aoindustries.com</email>
-			<organization>AO Industries, Inc.</organization>
-			<organizationUrl>https://www.aoindustries.com/</organizationUrl>
-		</developer>
-	</developers>
-
 	<scm>
 		<connection>scm:git:git://github.com/aoindustries/semanticcms-core-style.git</connection>
 		<developerConnection>scm:git:git@github.com:aoindustries/semanticcms-core-style.git</developerConnection>
