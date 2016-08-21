@@ -29,7 +29,10 @@
 .semanticcms-core-no-link-to-this-page {
 	font-weight: bold;
 }
-
+li.semanticcms-core-model-list-item-node {
+	/* Set back to default value to not inherit */
+	list-style-image: none;
+}
 li.semanticcms-core-model-list-item-page-nochildren {
 	/* TODO: Find properly licensed images and include them in this styles package */
 	list-style-image: url('../images/list-item/16x16/page-nochildren.gif');

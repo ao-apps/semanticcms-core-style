@@ -22,6 +22,7 @@
  */
 package com.semanticcms.core.style;
 
+import com.semanticcms.core.model.Node;
 import com.semanticcms.core.model.Page;
 import com.semanticcms.core.servlet.SemanticCMS;
 import javax.servlet.ServletContextEvent;
@@ -36,6 +37,8 @@ public class CoreStyleContextListener implements ServletContextListener {
 		SemanticCMS semanticCMS = SemanticCMS.getInstance(event.getServletContext());
 		// Add our CSS file
 		semanticCMS.addCssLink("/semanticcms-core-style/styles.css");
+		// Default list item style for nodes otherwise not provided
+		semanticCMS.addListItemCssClass(Node.class, "semanticcms-core-model-list-item-node");
 		// Add page list item style
 		semanticCMS.addListItemCssClassResolver(
 			Page.class,
