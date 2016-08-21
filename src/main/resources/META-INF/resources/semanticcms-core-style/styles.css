@@ -1,0 +1,40 @@
+/*
+ * semanticcms-core-style - Default style for Java API for modeling web page content and relationships.
+ * Copyright (C) 2013, 2014, 2015, 2016  AO Industries, Inc.
+ *     support@aoindustries.com
+ *     7262 Bull Pen Cir
+ *     Mobile, AL 36695
+ *
+ * This file is part of semanticcms-core-style.
+ *
+ * semanticcms-core-style is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * semanticcms-core-style is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with semanticcms-core-style.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+.semanticcms-core-tree-this-page,
+.semanticcms-core-links-to-page {
+	background-color: #ffff00 !important;
+}
+.semanticcms-core-tree-this-page,
+.semanticcms-core-no-link-to-this-page {
+	font-weight: bold;
+}
+
+li.semanticcms-core-model-list-item-page-nochildren {
+	/* TODO: Find properly licensed images and include them in this styles package */
+	list-style-image: url('../images/list-item/16x16/page-nochildren.gif');
+}
+li.semanticcms-core-model-list-item-page-children {
+	/* TODO: Find properly licensed images and include them in this styles package */
+	list-style-image: url('../images/list-item/16x16/page-children.gif');
+}
