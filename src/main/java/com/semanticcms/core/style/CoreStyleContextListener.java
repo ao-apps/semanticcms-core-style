@@ -29,7 +29,7 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
-@WebListener("Registers the styles for sections in SemanticCMS.")
+@WebListener("Registers the styles for SemanticCMS Core.")
 public class CoreStyleContextListener implements ServletContextListener {
 
 	@Override
