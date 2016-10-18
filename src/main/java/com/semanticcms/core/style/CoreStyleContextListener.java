@@ -46,7 +46,7 @@ public class CoreStyleContextListener implements ServletContextListener {
 				@Override
 				public String getListItemCssClass(Page page) {
 					return
-						page.getChildPages().isEmpty()
+						page.getChildRefs().isEmpty()
 						? "semanticcms-core-model-list-item-page-nochildren"
 						: "semanticcms-core-model-list-item-page-children"
 					;
