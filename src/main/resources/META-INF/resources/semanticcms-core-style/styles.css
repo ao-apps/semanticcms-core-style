@@ -41,3 +41,14 @@ li.semanticcms-core-model-list-item-page-children {
 	/* TODO: Find properly licensed images and include them in this styles package */
 	list-style-image: url('../images/list-item/16x16/page-children.gif');
 }
+/* These styles are consistent with the news view */
+article.semanticcms-core-view-content-article > h1 {
+	margin-bottom: 0em;
+}
+article.semanticcms-core-view-content-article > footer {
+	font-size: small;
+	margin-bottom: 0.5em;
+}
+div.semanticcms-core-view-content-body {
+	margin-top: 1em;
+}
