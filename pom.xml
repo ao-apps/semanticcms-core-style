@@ -100,7 +100,7 @@ along with semanticcms-core-style.  If not, see <http://www.gnu.org/licenses />.
 		<dependency>
 			<groupId>com.semanticcms</groupId>
 			<artifactId>semanticcms-core-view-content</artifactId>
-			<version>1.4.3</version>
+			<version>1.4.4-validation-SNAPSHOT</version>
 			<optional>true</optional>
 		</dependency>
 	</dependencies>
