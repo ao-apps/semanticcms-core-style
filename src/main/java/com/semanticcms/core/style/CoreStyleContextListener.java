@@ -1,6 +1,6 @@
 /*
  * semanticcms-core-style - Default style for Java API for modeling web page content and relationships.
- * Copyright (C) 2016  AO Industries, Inc.
+ * Copyright (C) 2016, 2017  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -24,25 +24,25 @@ package com.semanticcms.core.style;
 
 import com.semanticcms.core.model.Node;
 import com.semanticcms.core.model.Page;
-import com.semanticcms.core.servlet.SemanticCMS;
+import com.semanticcms.core.renderer.html.HtmlRenderer;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
-@WebListener("Registers the styles for SemanticCMS Core.")
+@WebListener("Registers the styles for SemanticCMS Core in HtmlRenderer.")
 public class CoreStyleContextListener implements ServletContextListener {
 
 	@Override
 	public void contextInitialized(ServletContextEvent event) {
-		SemanticCMS semanticCMS = SemanticCMS.getInstance(event.getServletContext());
+		HtmlRenderer htmlRenderer = HtmlRenderer.getInstance(event.getServletContext());
 		// Add our CSS file
-		semanticCMS.addCssLink("/semanticcms-core-style/styles.css");
+		htmlRenderer.addCssLink("/semanticcms-core-style/styles.css");
 		// Default list item style for nodes otherwise not provided
-		semanticCMS.addListItemCssClass(Node.class, "semanticcms-core-model-list-item-node");
+		htmlRenderer.addListItemCssClass(Node.class, "semanticcms-core-model-list-item-node");
 		// Add page list item style
-		semanticCMS.addListItemCssClassResolver(
+		htmlRenderer.addListItemCssClassResolver(
 			Page.class,
-			new SemanticCMS.ListItemCssClassResolver<Page>() {
+			new HtmlRenderer.ListItemCssClassResolver<Page>() {
 				@Override
 				public String getListItemCssClass(Page page) {
 					return
