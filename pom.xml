@@ -39,7 +39,7 @@ along with semanticcms-core-style.  If not, see <http://www.gnu.org/licenses />.
 		<shortTitle>Style</shortTitle>
 	</properties>
 
-	<name>SemanticCMS 1 Core Style</name>
+	<name>SemanticCMS Core Style</name>
 	<url>https://semanticcms.com/core/style/</url>
 	<description>Default style for Java API for modeling web page content and relationships.</description>
 	<inceptionYear>2013</inceptionYear>
