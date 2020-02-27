@@ -1,6 +1,6 @@
 /*
  * semanticcms-core-style - Default style for Java API for modeling web page content and relationships.
- * Copyright (C) 2016, 2017  AO Industries, Inc.
+ * Copyright (C) 2016, 2017, 2020  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -30,7 +30,7 @@ import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
 @WebListener("Registers the styles for SemanticCMS Core.")
-public class CoreStyleContextListener implements ServletContextListener {
+public class Initializer implements ServletContextListener {
 
 	@Override
 	public void contextInitialized(ServletContextEvent event) {
@@ -42,16 +42,9 @@ public class CoreStyleContextListener implements ServletContextListener {
 		// Add page list item style
 		semanticCMS.addListItemCssClassResolver(
 			Page.class,
-			new SemanticCMS.ListItemCssClassResolver<Page>() {
-				@Override
-				public String getListItemCssClass(Page page) {
-					return
-						page.getChildRefs().isEmpty()
-						? "semanticcms-core-model-list-item-page-nochildren"
-						: "semanticcms-core-model-list-item-page-children"
-					;
-				}
-			}
+			(Page page) -> page.getChildRefs().isEmpty()
+				? "semanticcms-core-model-list-item-page-nochildren"
+				: "semanticcms-core-model-list-item-page-children"
 		);
 	}
 
