@@ -1,6 +1,6 @@
 /*
  * semanticcms-core-style - Default style for Java API for modeling web page content and relationships.
- * Copyright (C) 2013, 2014, 2015, 2016, 2019  AO Industries, Inc.
+ * Copyright (C) 2013, 2014, 2015, 2016, 2019, 2020  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -33,14 +33,6 @@ li.semanticcms-core-model-list-item-node {
 	/* Set back to default value to not inherit */
 	list-style-image: none;
 }
-li.semanticcms-core-model-list-item-page-nochildren {
-	/* TODO: Find properly licensed images and include them in this styles package */
-	list-style-image: url('../docs-taglib/images/list-item/16x16/page-nochildren.gif');
-}
-li.semanticcms-core-model-list-item-page-children {
-	/* TODO: Find properly licensed images and include them in this styles package */
-	list-style-image: url('../docs-taglib/images/list-item/16x16/page-children.gif');
-}
 /* These styles are consistent with the news view */
 article.semanticcms-core-view-content-article > h1 {
 	margin-bottom: 0em;
@@ -51,4 +43,5 @@ article.semanticcms-core-view-content-article > footer {
 }
 div.semanticcms-core-view-content-body {
 	margin-top: 1em;
+	margin-bottom: 1em;
 }
