@@ -22,21 +22,29 @@
  */
 package com.semanticcms.core.style;
 
+import com.aoindustries.web.resources.registry.Style;
+import com.aoindustries.web.resources.servlet.RegistryEE;
 import com.semanticcms.core.model.Node;
 import com.semanticcms.core.model.Page;
 import com.semanticcms.core.servlet.SemanticCMS;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
-@WebListener("Registers the styles for SemanticCMS Core.")
-public class Initializer implements ServletContextListener {
+@WebListener("Registers the styles for SemanticCMS Core in RegistryEE and SemanticCMS.")
+public class CoreStyle implements ServletContextListener {
+
+	public static final Style SEMANTICCMS_CORE = new Style("/semanticcms-core-style/semanticcms-core.css");
 
 	@Override
 	public void contextInitialized(ServletContextEvent event) {
-		SemanticCMS semanticCMS = SemanticCMS.getInstance(event.getServletContext());
+		ServletContext servletContext = event.getServletContext();
+
 		// Add our CSS file
-		semanticCMS.addCssLink("/semanticcms-core-style/semanticcms-core.css");
+		RegistryEE.get(servletContext).global.styles.add(SEMANTICCMS_CORE);
+
+		SemanticCMS semanticCMS = SemanticCMS.getInstance(servletContext);
 		// Default list item style for nodes otherwise not provided
 		semanticCMS.addListItemCssClass(Node.class, "semanticcms-core-model-list-item-node");
 		// Add page list item style
