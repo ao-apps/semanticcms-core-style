@@ -35,8 +35,6 @@ along with semanticcms-core-style.  If not, see <http://www.gnu.org/licenses />.
 	<properties>
 		<!-- These values are copied from the project being documented -->
 		<documented.artifactId>semanticcms-core-style</documented.artifactId>
-		<documented.javaVersion>1.8</documented.javaVersion>
-		<documented.javac.link.javaApi>${javac.link.javaApi.jdk8}</documented.javac.link.javaApi>
 		<documented.name>SemanticCMS Core Style²</documented.name>
 		<documented.shortTitle>Style</documented.shortTitle>
 		<documented.description>Default style for Java API for modeling web page content and relationships.</documented.description>
