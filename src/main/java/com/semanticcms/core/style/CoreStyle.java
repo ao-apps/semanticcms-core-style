@@ -22,6 +22,7 @@
  */
 package com.semanticcms.core.style;
 
+import com.aoindustries.web.resources.registry.Group;
 import com.aoindustries.web.resources.registry.Style;
 import com.aoindustries.web.resources.servlet.RegistryEE;
 import com.semanticcms.core.model.Node;
@@ -35,6 +36,9 @@ import javax.servlet.annotation.WebListener;
 @WebListener("Registers the styles for SemanticCMS Core in RegistryEE and SemanticCMS.")
 public class CoreStyle implements ServletContextListener {
 
+	public static final Group.Name RESOURCE_GROUP = new Group.Name("semanticcms-core-style");
+
+	// TODO: Change to Group.Name once we have group-level ordering
 	public static final Style SEMANTICCMS_CORE = new Style("/semanticcms-core-style/semanticcms-core.css");
 
 	@Override
@@ -42,7 +46,11 @@ public class CoreStyle implements ServletContextListener {
 		ServletContext servletContext = event.getServletContext();
 
 		// Add our CSS file
-		RegistryEE.get(servletContext).global.styles.add(SEMANTICCMS_CORE);
+		RegistryEE.Application.get(servletContext)
+			.activate(RESOURCE_GROUP) // TODO: Activate as-needed
+			.getGroup(RESOURCE_GROUP)
+			.styles
+			.add(SEMANTICCMS_CORE);
 
 		SemanticCMS semanticCMS = SemanticCMS.getInstance(servletContext);
 		// Default list item style for nodes otherwise not provided
