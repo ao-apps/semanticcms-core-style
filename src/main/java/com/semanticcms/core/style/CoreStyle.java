@@ -1,6 +1,6 @@
 /*
  * semanticcms-core-style - Default style for Java API for modeling web page content and relationships.
- * Copyright (C) 2016, 2017, 2020  AO Industries, Inc.
+ * Copyright (C) 2016, 2017, 2020, 2021  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -22,9 +22,9 @@
  */
 package com.semanticcms.core.style;
 
-import com.aoindustries.web.resources.registry.Group;
-import com.aoindustries.web.resources.registry.Style;
-import com.aoindustries.web.resources.servlet.RegistryEE;
+import com.aoapps.web.resources.registry.Group;
+import com.aoapps.web.resources.registry.Style;
+import com.aoapps.web.resources.servlet.RegistryEE;
 import com.semanticcms.core.model.Node;
 import com.semanticcms.core.model.Page;
 import com.semanticcms.core.renderer.html.HtmlRenderer;
