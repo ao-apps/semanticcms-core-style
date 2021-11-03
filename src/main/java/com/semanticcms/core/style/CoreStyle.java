@@ -58,7 +58,7 @@ public class CoreStyle implements ServletContextListener {
 		// Add page list item style
 		htmlRenderer.addListItemCssClassResolver(
 			Page.class,
-			(Page page) -> page.getChildRefs().isEmpty()
+			page -> page.getChildRefs().isEmpty()
 				? "semanticcms-core-model-list-item-page-nochildren"
 				: "semanticcms-core-model-list-item-page-children"
 		);
