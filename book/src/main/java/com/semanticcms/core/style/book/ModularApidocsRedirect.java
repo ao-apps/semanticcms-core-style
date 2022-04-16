@@ -1,6 +1,6 @@
 /*
  * semanticcms-core-style - Default style for Java API for modeling web page content and relationships.
- * Copyright (C) 2021  AO Industries, Inc.
+ * Copyright (C) 2021, 2022  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -20,6 +20,7 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with semanticcms-core-style.  If not, see <https://www.gnu.org/licenses/>.
  */
+
 package com.semanticcms.core.style.book;
 
 import com.aoapps.net.URIParametersUtils;
