@@ -37,36 +37,36 @@ import javax.servlet.annotation.WebListener;
 @WebListener("Registers the styles for SemanticCMS Core in RegistryEE and HtmlRenderer.")
 public class CoreStyle implements ServletContextListener {
 
-	public static final Group.Name RESOURCE_GROUP = new Group.Name("semanticcms-core-style");
+  public static final Group.Name RESOURCE_GROUP = new Group.Name("semanticcms-core-style");
 
-	// TODO: Change to Group.Name once we have group-level ordering
-	public static final Style SEMANTICCMS_CORE = new Style("/semanticcms-core-style/semanticcms-core.css");
+  // TODO: Change to Group.Name once we have group-level ordering
+  public static final Style SEMANTICCMS_CORE = new Style("/semanticcms-core-style/semanticcms-core.css");
 
-	@Override
-	public void contextInitialized(ServletContextEvent event) {
-		ServletContext servletContext = event.getServletContext();
+  @Override
+  public void contextInitialized(ServletContextEvent event) {
+    ServletContext servletContext = event.getServletContext();
 
-		// Add our CSS file
-		RegistryEE.Application.get(servletContext)
-			.activate(RESOURCE_GROUP) // TODO: Activate as-needed
-			.getGroup(RESOURCE_GROUP)
-			.styles
-			.add(SEMANTICCMS_CORE);
+    // Add our CSS file
+    RegistryEE.Application.get(servletContext)
+      .activate(RESOURCE_GROUP) // TODO: Activate as-needed
+      .getGroup(RESOURCE_GROUP)
+      .styles
+      .add(SEMANTICCMS_CORE);
 
-		HtmlRenderer htmlRenderer = HtmlRenderer.getInstance(servletContext);
-		// Default list item style for nodes otherwise not provided
-		htmlRenderer.addListItemCssClass(Node.class, "semanticcms-core-model-list-item-node");
-		// Add page list item style
-		htmlRenderer.addListItemCssClassResolver(
-			Page.class,
-			page -> page.getChildRefs().isEmpty()
-				? "semanticcms-core-model-list-item-page-nochildren"
-				: "semanticcms-core-model-list-item-page-children"
-		);
-	}
+    HtmlRenderer htmlRenderer = HtmlRenderer.getInstance(servletContext);
+    // Default list item style for nodes otherwise not provided
+    htmlRenderer.addListItemCssClass(Node.class, "semanticcms-core-model-list-item-node");
+    // Add page list item style
+    htmlRenderer.addListItemCssClassResolver(
+      Page.class,
+      page -> page.getChildRefs().isEmpty()
+        ? "semanticcms-core-model-list-item-page-nochildren"
+        : "semanticcms-core-model-list-item-page-children"
+    );
+  }
 
-	@Override
-	public void contextDestroyed(ServletContextEvent event) {
-		// Do nothing
-	}
+  @Override
+  public void contextDestroyed(ServletContextEvent event) {
+    // Do nothing
+  }
 }
