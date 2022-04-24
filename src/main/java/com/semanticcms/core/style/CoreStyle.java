@@ -48,20 +48,20 @@ public class CoreStyle implements ServletContextListener {
 
     // Add our CSS file
     RegistryEE.Application.get(servletContext)
-      .activate(RESOURCE_GROUP) // TODO: Activate as-needed
-      .getGroup(RESOURCE_GROUP)
-      .styles
-      .add(SEMANTICCMS_CORE);
+        .activate(RESOURCE_GROUP) // TODO: Activate as-needed
+        .getGroup(RESOURCE_GROUP)
+        .styles
+        .add(SEMANTICCMS_CORE);
 
     SemanticCMS semanticCMS = SemanticCMS.getInstance(servletContext);
     // Default list item style for nodes otherwise not provided
     semanticCMS.addListItemCssClass(Node.class, "semanticcms-core-model-list-item-node");
     // Add page list item style
     semanticCMS.addListItemCssClassResolver(
-      Page.class,
-      page -> page.getChildRefs().isEmpty()
-        ? "semanticcms-core-model-list-item-page-nochildren"
-        : "semanticcms-core-model-list-item-page-children"
+        Page.class,
+        page -> page.getChildRefs().isEmpty()
+            ? "semanticcms-core-model-list-item-page-nochildren"
+            : "semanticcms-core-model-list-item-page-children"
     );
   }
 
