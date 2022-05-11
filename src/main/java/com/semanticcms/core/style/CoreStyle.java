@@ -34,6 +34,9 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
+/**
+ * Registers the styles for SemanticCMS Core in {@link RegistryEE} and {@link SemanticCMS}.
+ */
 @WebListener("Registers the styles for SemanticCMS Core in RegistryEE and SemanticCMS.")
 public class CoreStyle implements ServletContextListener {
 
@@ -50,14 +53,14 @@ public class CoreStyle implements ServletContextListener {
     RegistryEE.Application.get(servletContext)
         .activate(RESOURCE_GROUP)// TODO: Activate as-needed
         .getGroup(RESOURCE_GROUP)
-        .styles
-        .add(SEMANTICCMS_CORE);
+            .styles
+            .add(SEMANTICCMS_CORE);
 
-    SemanticCMS semanticCMS = SemanticCMS.getInstance(servletContext);
+    SemanticCMS semanticCms = SemanticCMS.getInstance(servletContext);
     // Default list item style for nodes otherwise not provided
-    semanticCMS.addListItemCssClass(Node.class, "semanticcms-core-model-list-item-node");
+    semanticCms.addListItemCssClass(Node.class, "semanticcms-core-model-list-item-node");
     // Add page list item style
-    semanticCMS.addListItemCssClassResolver(
+    semanticCms.addListItemCssClassResolver(
         Page.class,
         page -> page.getChildRefs().isEmpty()
             ? "semanticcms-core-model-list-item-page-nochildren"
