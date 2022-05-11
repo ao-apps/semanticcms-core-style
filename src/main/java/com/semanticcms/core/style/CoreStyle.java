@@ -34,6 +34,9 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
+/**
+ * Registers the styles for SemanticCMS Core in {@link RegistryEE} and {@link HtmlRenderer}.
+ */
 @WebListener("Registers the styles for SemanticCMS Core in RegistryEE and HtmlRenderer.")
 public class CoreStyle implements ServletContextListener {
 
@@ -50,8 +53,8 @@ public class CoreStyle implements ServletContextListener {
     RegistryEE.Application.get(servletContext)
         .activate(RESOURCE_GROUP)// TODO: Activate as-needed
         .getGroup(RESOURCE_GROUP)
-        .styles
-        .add(SEMANTICCMS_CORE);
+            .styles
+            .add(SEMANTICCMS_CORE);
 
     HtmlRenderer htmlRenderer = HtmlRenderer.getInstance(servletContext);
     // Default list item style for nodes otherwise not provided
