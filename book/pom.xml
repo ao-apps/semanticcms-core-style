@@ -41,6 +41,9 @@ along with semanticcms-core-style.  If not, see <https://www.gnu.org/licenses/>.
     <documented.artifactId>semanticcms-core-style</documented.artifactId>
     <documented.name>SemanticCMS Core Style</documented.name>
     <documented.description>Default style for Java API for modeling web page content and relationships.</documented.description>
+    <javadoc.breadcrumbs><![CDATA[<a target="${javadoc.target}" href="https://semanticcms.com/">SemanticCMS</a>
+/ <a target="${javadoc.target}" href="https://semanticcms.com/core/">Core</a>
+/ <a target="${javadoc.target}" href="${project.url}">Style</a>]]></javadoc.breadcrumbs>
 
     <description.html><![CDATA[Documentation for <a target="${javadoc.target}" href="${project.url}">${documented.name}</a> in <a target="${javadoc.target}" href="https://semanticcms.com/">SemanticCMS</a> format.]]></description.html>
   </properties>
