@@ -23,7 +23,7 @@ Default style for Java API for modeling web page content and relationships.
 * [Project Home](https://semanticcms.com/core/style/)
 * [Changelog](https://semanticcms.com/core/style/changelog)
 * [API Docs](https://semanticcms.com/core/style/apidocs/)
-* [Maven Central Repository](https://central.sonatype.com/artifact/com.semanticcms/semanticcms-core-style)
+* [Central Repository](https://central.sonatype.com/artifact/com.semanticcms/semanticcms-core-style)
 * [GitHub](https://github.com/ao-apps/semanticcms-core-style)
 
 ## Contact Us
