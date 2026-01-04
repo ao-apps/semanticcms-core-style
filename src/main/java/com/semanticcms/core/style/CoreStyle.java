@@ -1,6 +1,6 @@
 /*
  * semanticcms-core-style - Default style for Java API for modeling web page content and relationships.
- * Copyright (C) 2016, 2017, 2020, 2021, 2022  AO Industries, Inc.
+ * Copyright (C) 2016, 2017, 2020, 2021, 2022, 2025, 2026  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -29,10 +29,10 @@ import com.aoapps.web.resources.servlet.RegistryEE;
 import com.semanticcms.core.model.Node;
 import com.semanticcms.core.model.Page;
 import com.semanticcms.core.servlet.SemanticCMS;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletContextEvent;
-import javax.servlet.ServletContextListener;
-import javax.servlet.annotation.WebListener;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletContextEvent;
+import jakarta.servlet.ServletContextListener;
+import jakarta.servlet.annotation.WebListener;
 
 /**
  * Registers the styles for SemanticCMS Core in {@link RegistryEE} and {@link SemanticCMS}.
